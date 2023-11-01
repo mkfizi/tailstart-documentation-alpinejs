@@ -13,6 +13,12 @@ Types of changes:
 * `Fixed` for any bug fixes.
 * `Security` in case of vulnerabilities.
 
+## [0.2.0] - 2023-11-01
+### Changed
+- Rewrite `app.js` method declaration.
+- Revise `404.html` page.
+- Revise content.
+
 ## [0.1.0] - 2023-08-31
 ### Added
 - First release.
