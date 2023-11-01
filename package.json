@@ -1,7 +1,7 @@
 {
-	"name": "@tailstart/starterkit-documentation-alpinejs",
-	"version": "0.1.0",
-	"description": "Tailstart documentation starter kit.",
+	"name": "@mkfizi/tailstart-documentation-alpinejs",
+	"version": "0.2.0",
+	"description": "TailwindCSS library of multipurpose starter kits",
 	"keywords": [
 		"Tailwindcss",
 		"Starter Kit",
