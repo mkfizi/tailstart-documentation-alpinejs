@@ -1,18 +1,17 @@
 /**
  * --------------------------------------------------------------------------
- * Tailstart - Documentation Starter Kit (AlpineJS) v0.1.0: app.js
- * Licensed under MIT (https://github.com/tailstart/starterkit-documentation-alpinejs/blob/main/LICENSE)
+ * Tailstart - Documentation (AlpineJS) v0.2.0: app.js
+ * Licensed under MIT (https://github.com/mkfizi/tailstart-documentation-alpinejs/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
-
 
 (function () {
     'use strict';
 
     const app = {};
 
-    app.name = 'Tailstart - Documentation Starter Kit (AlpineJS)';
-    app.version = '0.1.0';
+    app.name = 'Tailstart - Documentation (AlpineJS)';
+    app.version = '0.2.0';
 
     app.element = {
         footerCurrentYear: document.getElementById('footer-year'),
@@ -23,8 +22,8 @@
     app.view = {
         footer: {
 
-            // Toggle footer content with current year, app name and version
-            toggle: () => {
+            // Initialize footer content with current year, app name and version
+            init: () => {
                 if (app.element.footerCurrentYear) {
                     app.element.footerCurrentYear.innerHTML = new Date().getFullYear();
                 }
@@ -41,7 +40,7 @@
 
         // Initialize view
         init: () => {
-            app.view.footer.toggle();
+            app.view.footer.init();
         }
     }
 
