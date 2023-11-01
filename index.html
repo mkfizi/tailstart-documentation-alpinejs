@@ -315,17 +315,17 @@
                     focusTrap($el, event);
                 }
             "
-            @click.document="
-                if(clickOutside($el, event) === false) {
-                    isSidebarMenuOpen = false;
-                }
-            "
             @resize.window="
                 if (isBreakpointSize($el) === true) {
                     isSidebarMenuOpen = false;
                 }
 
                 toggleResponsive($el);
+            "
+            @click.document="
+                if(clickOutside($el, event) === false) {
+                    isSidebarMenuOpen = false;
+                }
             "
         >
             <div class="fixed top-0 left-0 h-full p-4 overflow-y-auto bg-white lg:p-0 lg:pt-16 lg:pb-32 lg:top-16 lg:sticky w-72 lg:w-48 lg:bg-transparent lg:dark:bg-transparent dark:bg-neutral-800 drop-shadow-md lg:drop-shadow-none" aria-labelledby="sidebar-menu">
