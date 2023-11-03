@@ -13,11 +13,12 @@ Types of changes:
 * `Fixed` for any bug fixes.
 * `Security` in case of vulnerabilities.
 
-## [0.2.0] - 2023-11-01
+## [0.2.0] - 2023-11-04
 ### Changed
 - Rewrite `app.js` method declaration.
 - Revise `404.html` page.
 - Revise content.
+- Change link colours to `neutral-500` for light mode.
 
 ## [0.1.0] - 2023-08-31
 ### Added
