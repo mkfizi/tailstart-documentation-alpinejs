@@ -14,6 +14,9 @@ Types of changes:
 * `Security` in case of vulnerabilities.
 
 ## [0.2.0] - 2023-11-04
+### Added
+- Border to sidebar menu.
+
 ### Changed
 - Rewrite `app.js` method declaration.
 - Revise `404.html` page.
