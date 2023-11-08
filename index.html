@@ -195,23 +195,27 @@
                                     links: [
                                         { 
                                             url: '#', 
-                                            title: 'Examples'
+                                            title: 'Examples',
+                                            isCurrentPage: false
                                         },
                                         { 
                                             url: '#', 
-                                            title: 'Showcases'
+                                            title: 'Showcases',
+                                            isCurrentPage: false
                                         },
                                         { 
                                             url: '#', 
-                                            title: 'Developers'
+                                            title: 'Developers',
+                                            isCurrentPage: false
                                         }
                                     ]
                                 }"
                             >
                                 <template x-for="link in links" hidden>
                                     <li>
-                                        <a class="block font-semibold text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white" 
+                                        <a class="block font-semibold hover:text-black dark:hover:text-white" 
                                             :href="link.url"
+                                            :class="link.isCurrentPage ? 'text-black dark:text-white' : 'text-neutral-500 dark:text-neutral-400'"
                                             x-text="link.title"
                                         ></a>
                                     </li>
@@ -367,49 +371,49 @@
                             {
                                 url: '#',
                                 title: 'Getting Started',
-                                isActive: true,
-                                groups: [
+                                isCurrentPage: true,
+                                menus: [
                                     {
                                         url: '#',
                                         title: 'Getting Started',
-                                        isActive: true,
+                                        isCurrentPage: true,
                                     },
                                     {
                                         url: '#',
                                         title: 'Features',
-                                        isActive: false,
+                                        isCurrentPage: false,
                                     },
                                     {
                                         url: '#',
                                         title: 'Configurations',
-                                        isActive: false,
+                                        isCurrentPage: false,
                                     },
                                     {
                                         url: '#b',
                                         title: 'Tutorial',
-                                        isActive: false,
+                                        isCurrentPage: false,
                                     }
                                 ]
                             },
                             {
                                 url: '#',
                                 title: 'The Basics',
-                                isActive: false,
+                                isCurrentPage: false,
                             },
                             {
                                 url: '#',
                                 title: 'API References',
-                                isActive: false,
+                                isCurrentPage: false,
                             },
                             {
                                 url: '#',
                                 title: 'External Resources',
-                                isActive: false,
+                                isCurrentPage: false,
                             },
                             {
                                 url: '#',
                                 title: 'Troubleshooting',
-                                isActive: false,
+                                isCurrentPage: false,
                             },
                             {
                                 url: '#',
@@ -422,16 +426,16 @@
                 <template x-for="link in links" hidden>
                     <li>
                         <a href="#" class="block text-base hover:text-black dark:hover:text-white"
-                            :class="link.isActive ? 'font-bold text-black dark:text-white' : 'font-semibold text-neutral-500 dark:text-neutral-400'"
+                            :class="link.isCurrentPage ? 'font-bold text-black dark:text-white' : 'font-semibold text-neutral-500 dark:text-neutral-400'"
                             x-text="link.title"
                         ></a>
                         <ul class="mt-4 ml-4 space-y-3 marker:text-neutral-700 dark:marker:text-neutral-300">
-                            <template x-for="group in link.groups" hidden>
+                            <template x-for="menu in link.menus" hidden>
                                 <li>
                                     <a class="block text-base hover:text-black hover:dark:text-white"
-                                        :href="group.url"
-                                        :class="group.isActive ? 'text-black dark:text-white font-semibold' : 'text-neutral-500 dark:text-neutral-400'"
-                                        x-text="group.title"
+                                        :href="menu.url"
+                                        :class="menu.isCurrentPage ? 'text-black dark:text-white font-semibold' : 'text-neutral-500 dark:text-neutral-400'"
+                                        x-text="menu.title"
                                     ></a>
                                 </li>
                             </template>
